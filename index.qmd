@@ -1,0 +1,58 @@
+---
+title: "Demystifying machine learning for population researchers"
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+Advances in computational power and statistical algorithms, in
+conjunction with the increasing availability of large datasets, have led
+to a Cambrian explosion of machine learning (ML) methods. For population
+researchers, these methods are useful not only for predicting population
+dynamics but also as tools to improve causal inference tasks. However,
+the rapid evolution of this literature, coupled with terminological
+disparities from conventional approaches, renders these methods
+enigmatic and arduous for many population researchers to grasp.
+
+This workshop clarifies the goals, techniques, and applications of
+machine learning methods for population research. The workshop covers
+
+-   an introduction to ML methods for population researchers,
+
+-   showcases of ML applications to answer causal questions,
+
+-   discussions of the current developments of ML for population health,
+    fertility and family dynamics, and
+
+-   fosters critical discussions about the shortfalls of these
+    techniques.
+
+The main focus of this workshop is on ML techniques using quantitative
+population data and research questions, not on ML language models. The
+workshop consists of keynotes, contributed sessions, and a tutorial.
+
+The keynote speakers are IXX and YY.
+
+This in-person workshop will take place in November 5-6 at the Max
+Planck Institute for Demographic Research in Rostock. We invite
+population researchers with interest in ML applications. We aim to
+receive contributions from different fields of population sciences, such
+as population health, formal and social demography, public health and
+economics, among others.
+
+We invite submission of original research abstract with relevance to ML
+and population sciences (max 500 words) and a CV (max. one page) to
+MLworkshop\@demogr.mpg.de.
+
+Submission Deadline: 15. April 2024
+
+Decisions on the selection will be communicated before May 1st. Please
+direct any questions to this email address.
+
+Organization committee: Angela Carollo, Aapo Hiilamo, Mikko Myrskyla.
+
+*The workshop has no fees. Participants are expected to cover their
+travel and accommodation but limited financial support, offered on a
+competitive basis, is available for junior scientists or scientists from
+low-middle income countries. Please indicate the request for such
+funding at the time of abstract submission.*

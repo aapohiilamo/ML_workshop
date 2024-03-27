@@ -1,0 +1,51 @@
+/* css styles */
+
+body {
+  font-family: Arial, sans-serif;
+}
+/* Define color variables */
+/* Define the color variable for the sidebar */
+:root {
+  --color-4: rgb(10, 120, 120);
+}
+
+/* Attempt to target the docked sidebar */
+/* Define the color variable for the sidebar */
+:root {
+  --sidebar-color: rgb(10, 120, 120);
+}
+
+/* Assuming 'sidebar' is a class assigned to the container of the sidebar */
+.sidebar {
+  background-color: var(--sidebar-color) !important; /* Ensure this rule takes precedence */
+}
+
+/* If 'sidebar' is an ID, you should use the '#' symbol instead */
+#sidebar {
+  background-color: var(--sidebar-color) !important;
+}
+
+/* These are more specific selectors that might be necessary if Quarto uses nested classes */
+.sidebar-content,
+.sidebar .section,
+.sidebar nav {
+  background-color: var(--sidebar-color) !important;
+}
+
+/* Adjust the text color within the sidebar for better contrast if necessary */
+.sidebar,
+.sidebar a,
+.sidebar a:visited {
+  color: white !important; /* This makes the text white */
+}
+
+/* Change the hover effect for links if desired */
+.sidebar a:hover {
+  opacity: 0.8 !important;
+}
+
+/* Additional styles for buttons, headings, etc., can be added below */
+
+p {
+  line-height: 1;
+}
