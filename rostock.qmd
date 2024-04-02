@@ -4,16 +4,33 @@ title: "Rostock"
 
 ## How to get there?
 
-Some sentences re travel options
+Rostock can be reached by train from the international airports of Berlin (BER) and Hamburg (HAM).
+Information about train schedules and tickets can be found [here](https://int.bahn.de/en).
+
 
 ## Where to stay?
 
-Suggested accumodations...
+There are several options for accommodation in Rostock.  
+We recommend the following hotels:  
+-  [Motel One Rostock](https://www.motel-one.com/de/hotels/rostock/hotel-rostock/) in the city center, is only a 20 minutes walk from the Institute.  
+-  [B&B HOTEL Rostock City-West](https://www.hotel-bb.com/en/hotel/rostock-city-west?original_action=%2Fen%2Fhotel%2Frostock-city-west&gps%5Bvalue%5D=54.0933079%2C12.1096176&gps%5Bdistance%5D%5Bfrom%5D=50&arrival_date=11%2F04%2F2024&departure_date=11%2F06%2F2024&destination=Rostock%20City-West&internal_keywords=Rostock%20City-West&viewport=1900x700&r1_ad=1&currency_code=EUR) right in front of the Institute.  
+-  [elaya hotel Rostock](https://www.elaya-hotels.com/booking1?sid=b1fea75e-34cd-4d0d-83d7-df8e432f463f&utm_source=GoogleHPA_free&utm_medium=Triptease&utm_campaign=MetaI/O&utm_content=Localuniversal&_ga=2.188343656.1589964683.1712046656-731039083.1712046656&namespace=elaya-hotel-rostock) also in front of the Institute.  
 
 ## MPIDR
 
-The location of the institute
+The Max Planck Institute for Demographic Research is located at the Warnow River.
+
+Address:  
+Max Planck Institute for Demographic Research (MPIDR)  
+Konrad-Zuse-Straße 1  
+18057 Rostock  
+Germany  
+[Google maps](https://www.google.com/maps/place/Max-Planck-Institut+f%C3%BCr+demografische+Forschung/@54.0938719,12.1108679,15z/data=!4m6!3m5!1s0x47ac5736236814e3:0x23782ba4da7b5a3d!8m2!3d54.0938719!4d12.1108679!16zL20vMGdrdzk4?entry=tts&shorturl=1)
+
+The nearest public transportation stops in Rostock are: *Maßmannstraße* (tram) and *Holbeinplatz* (S-Bahn). Information about public transportation can be found [here](https://www.rsag-online.de/).
+
 
 ## What to do?
 
-Some sentences on potential visits
+The Hanseatic and University city of Rostock is the largest city in German state of Mecklemburg-Vorpommern. It stretches along boths sides of the Warnow River, and it includes the seaside town of Warnemünde. 
+For information about activities and destinations in Rostock, we refer to the official page from the municipality [here](https://www.rostock.de/en/activities.html).

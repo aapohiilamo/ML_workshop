@@ -7,6 +7,6 @@ Preliminary program:
 |     |                Tuesday              |          Wednesday                     |
 |:---:|:-----------------------------------:|:--------------------------------------:|
 |  Morning  | Welcome & keynote           | Contributed session 3                          |
-|  Early afternoon  | Contributed session 1           | Keynote 2                     |
-|  Late afternoon  | Contributed session 2          | Contributed session 4 + panel disucssion |
+|  Early afternoon  | Contributed session 1  & tutorial         | Keynote 2                     |
+|  Late afternoon  | Contributed session 2          | Contributed session 4 + panel discussion |
 |  Evening | Social dinner         |  |
