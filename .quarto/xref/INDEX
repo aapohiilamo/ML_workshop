@@ -13,5 +13,20 @@
   },
   "schedule.qmd": {
     "schedule.html": "33a06ec0"
+  },
+  "ML_workshop/contact.qmd": {
+    "contact.html": "66e4999f"
+  },
+  "ML_workshop/index.qmd": {
+    "index.html": "804cd386"
+  },
+  "ML_workshop/materials.qmd": {
+    "materials.html": "820d24f7"
+  },
+  "ML_workshop/rostock.qmd": {
+    "rostock.html": "ef09d40e"
+  },
+  "ML_workshop/schedule.qmd": {
+    "schedule.html": "57cf7eb9"
   }
 }

@@ -1,0 +1,22 @@
+library(splines)
+
+# Generate example data
+df <- data.frame(age = seq(50, 80, by = 1))
+
+# Create a B-spline basis for the age variable
+spline_basis <- bs(df$age, knots = 3)
+
+# Convert the spline basis to a data frame to view the values
+spline_values <- as.data.frame(spline_basis)
+
+# Extract values of the first spline basis function as a vector
+spline_vector <- spline_values[, 1]
+
+# Sum the spline values across all basis functions for each age (optional)
+combined_spline_vector <- rowSums(spline_values)
+
+# Assign age as names to the combined spline vector (optional)
+named_spline_vector <- setNames(combined_spline_vector, df$age)
+
+# Print the final named spline vector
+print(named_spline_vector)

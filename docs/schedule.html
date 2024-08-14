@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -44,7 +44,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -53,10 +59,28 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
+<script src="site_libs/core-js-2.5.3/shim.min.js"></script>
+
+<script src="site_libs/react-18.2.0/react.min.js"></script>
+
+<script src="site_libs/react-18.2.0/react-dom.min.js"></script>
+
+<script src="site_libs/reactwidget-2.0.0/react-tools.umd.cjs"></script>
+
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<link href="site_libs/reactable-0.4.4/reactable.css" rel="stylesheet">
+
+<script src="site_libs/reactable-binding-0.4.4/reactable.js"></script>
+
 
 
 <link rel="stylesheet" href="styles.css">
@@ -68,13 +92,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./schedule.html">Preliminary program</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./schedule.html">Program</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -83,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Demystifying ML Rostock November 5-6</a> 
@@ -108,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./schedule.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Preliminary program</span></a>
+ <span class="menu-text">Program</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -126,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
@@ -149,45 +173,559 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
 
-<p>Preliminary program:</p>
-<table class="table">
-<colgroup>
-<col style="width: 6%">
-<col style="width: 45%">
-<col style="width: 48%">
-</colgroup>
+
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div id="oeevmpblxo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#oeevmpblxo table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#oeevmpblxo thead, #oeevmpblxo tbody, #oeevmpblxo tfoot, #oeevmpblxo tr, #oeevmpblxo td, #oeevmpblxo th {
+  border-style: none;
+}
+
+#oeevmpblxo p {
+  margin: 0;
+  padding: 0;
+}
+
+#oeevmpblxo .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#oeevmpblxo .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#oeevmpblxo .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#oeevmpblxo .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#oeevmpblxo .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#oeevmpblxo .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#oeevmpblxo .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#oeevmpblxo .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#oeevmpblxo .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#oeevmpblxo .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#oeevmpblxo .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#oeevmpblxo .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#oeevmpblxo .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#oeevmpblxo .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#oeevmpblxo .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#oeevmpblxo .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#oeevmpblxo .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#oeevmpblxo .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#oeevmpblxo .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#oeevmpblxo .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#oeevmpblxo .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#oeevmpblxo .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#oeevmpblxo .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#oeevmpblxo .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#oeevmpblxo .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#oeevmpblxo .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#oeevmpblxo .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#oeevmpblxo .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#oeevmpblxo .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#oeevmpblxo .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#oeevmpblxo .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#oeevmpblxo .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#oeevmpblxo .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#oeevmpblxo .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#oeevmpblxo .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#oeevmpblxo .gt_left {
+  text-align: left;
+}
+
+#oeevmpblxo .gt_center {
+  text-align: center;
+}
+
+#oeevmpblxo .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#oeevmpblxo .gt_font_normal {
+  font-weight: normal;
+}
+
+#oeevmpblxo .gt_font_bold {
+  font-weight: bold;
+}
+
+#oeevmpblxo .gt_font_italic {
+  font-style: italic;
+}
+
+#oeevmpblxo .gt_super {
+  font-size: 65%;
+}
+
+#oeevmpblxo .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#oeevmpblxo .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#oeevmpblxo .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#oeevmpblxo .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#oeevmpblxo .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#oeevmpblxo .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#oeevmpblxo .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#oeevmpblxo .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#oeevmpblxo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
-<tr class="header">
-<th style="text-align: center;"></th>
-<th style="text-align: center;">Tuesday</th>
-<th style="text-align: center;">Wednesday</th>
+<tr class="header gt_heading">
+<th colspan="4" class="gt_heading gt_title gt_font_normal gt_bottom_border">Timetable</th>
+</tr>
+<tr class="odd gt_col_headings gt_spanner_row">
+<th colspan="2" id="Day 1 - 05/11/2024" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><span class="gt_column_spanner">Day 1 - 05/11/2024</span></th>
+<th colspan="2" id="Day 2 - 06/11/2024" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><span class="gt_column_spanner">Day 2 - 06/11/2024</span></th>
+</tr>
+<tr class="header gt_col_headings">
+<th class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"></th>
+<th class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"></th>
+<th class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"></th>
+<th class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"></th>
 </tr>
 </thead>
-<tbody>
+<tbody class="gt_table_body">
 <tr class="odd">
-<td style="text-align: center;">Morning</td>
-<td style="text-align: center;">Welcome &amp; keynote</td>
-<td style="text-align: center;">Contributed session 2</td>
+<td class="gt_row gt_center" headers="Time_D1">09:00 - 09:10</td>
+<td class="gt_row gt_center" headers="Title_D1">Opening</td>
+<td class="gt_row gt_center" headers="Time_D2">9:20 - 10:20</td>
+<td class="gt_row gt_center" headers="Title_D2">Keynote: Ian Lundberg</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Early afternoon</td>
-<td style="text-align: center;">Tutorial</td>
-<td style="text-align: center;">Keynote &amp; contributed session 3</td>
+<td class="gt_row gt_center" headers="Time_D1">9:10 - 10:30</td>
+<td class="gt_row gt_center" headers="Title_D1">Session 1: Fertility</td>
+<td class="gt_row gt_center" headers="Time_D2">10:20 - 10:40</td>
+<td class="gt_row gt_center" headers="Title_D2" style="background-color: #FFDDC1">Coffee</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">Late afternoon</td>
-<td style="text-align: center;">Contributed session 1</td>
-<td style="text-align: center;">Contributed session 4 + panel discussion</td>
+<td class="gt_row gt_center" headers="Time_D1">10:30 - 10:50</td>
+<td class="gt_row gt_center" headers="Title_D1" style="background-color: #FFDDC1">Coffee</td>
+<td class="gt_row gt_center" headers="Time_D2">10:40 - 12:00</td>
+<td class="gt_row gt_center" headers="Title_D2">Session 5: Causal Inference</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Evening</td>
-<td style="text-align: center;">Social dinner</td>
-<td style="text-align: center;"></td>
+<td class="gt_row gt_center" headers="Time_D1">10:50 - 11:50</td>
+<td class="gt_row gt_center" headers="Title_D1">Session 2: Mortality</td>
+<td class="gt_row gt_center" headers="Time_D2">12:00 - 13:00</td>
+<td class="gt_row gt_center" headers="Title_D2" style="background-color: #FFDDC1">Lunch</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="Time_D1">11:50 - 13:00</td>
+<td class="gt_row gt_center" headers="Title_D1" style="background-color: #FFDDC1">Lunch</td>
+<td class="gt_row gt_center" headers="Time_D2">13:00 - 14:00</td>
+<td class="gt_row gt_center" headers="Title_D2">Session 6: Predictions health</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="Time_D1">13:00 - 14:00</td>
+<td class="gt_row gt_center" headers="Title_D1">Session 3: Migration and SES</td>
+<td class="gt_row gt_center" headers="Time_D2">14:00 - 14:20</td>
+<td class="gt_row gt_center" headers="Title_D2" style="background-color: #FFDDC1">Coffee</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="Time_D1">14:00 - 15:30</td>
+<td class="gt_row gt_center" headers="Title_D1" style="background-color: #FFDDC1">Coffee + Poster</td>
+<td class="gt_row gt_center" headers="Time_D2">14:20 - 15:20</td>
+<td class="gt_row gt_center" headers="Title_D2">Computer Tutorial</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="Time_D1">15:30 - 16:50</td>
+<td class="gt_row gt_center" headers="Title_D1">Session 4: Methods</td>
+<td class="gt_row gt_center" headers="Time_D2">15:20 - 15:40</td>
+<td class="gt_row gt_center" headers="Title_D2" style="background-color: #FFDDC1">Coffee</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="Time_D1">16:50 - 17:00</td>
+<td class="gt_row gt_center" headers="Title_D1" style="background-color: #FFDDC1">Coffee</td>
+<td class="gt_row gt_center" headers="Time_D2">15:40 - 16:40</td>
+<td class="gt_row gt_center" headers="Title_D2">Session 7: Understanding complexity</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="Time_D1">17:00 - 18:00</td>
+<td class="gt_row gt_center" headers="Title_D1">Keynote: Jennie Brand</td>
+<td class="gt_row gt_center" headers="Time_D2">16:40 - 16:50</td>
+<td class="gt_row gt_center" headers="Title_D2" style="background-color: #FFDDC1">Coffee</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="Time_D1">19:00+</td>
+<td class="gt_row gt_center" headers="Title_D1" style="background-color: #FFDDC1">Social dinner</td>
+<td class="gt_row gt_center" headers="Time_D2">16:50 - 18:00</td>
+<td class="gt_row gt_center" headers="Title_D2">Panel discussion</td>
 </tr>
 </tbody>
 </table>
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="reactable html-widget html-fill-item" id="htmlwidget-a80847bf0eeb38a31c3f" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-a80847bf0eeb38a31c3f">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Session":["Session 1: Fertility","Session 2: Mortality","Session 3: Migration and SES","Session 4: Methods","Session 5: Causal Inference","Session 6: Predictions health","Session 7: Understanding complexity"],"Details":["Rannveig Hart - Explaining Childness: A machine learning approach<br>Henrik Schubert - Couple’s subfecundity at the population level<br>Micol Morellini - Fertility of Emigrants via Online Retail Data: The Case of MammaPack<br>Xiao Xu - Predicting fertility behaviors with Deep Neural Networks: a comparative study","Chu Yue - Leveraging Machine Learning Techniques for Verbal Autopsy Analysis<br>Natalia Martins Arruda - Socioeconomic Inequalities in Adult Mortality across Small Areas in Brazil: Exploration \r\nAnalysis Using Machine Learning Models<br>Pietro Violo - The Usage of Obituaries as an Alternative Data Source for Mortality","Alejandra Rodriguo Sanchez - The predictive residual method: A machine learning approach to estimate the stock of migrants without residence status using innovative data.<br>Carla Rowold - Decomposing the Gender Wealth Gap in late working age based on the most relevant family and work life course aspects<br>Daniela Ghio - An analytical approach to explain the spatial interplay among migration drivers<br>Sanni Kuikka - Predicting Multidimensional Socioeconomic Status with Parental SES and Childhood Circumstances","Annika Strömer - A model-based boosting approach to deal with dependent censoring<br>Hannah Klinkhammer - Bridging the performance gap for underrepresented populations: How to account for population structure in polygenic risk modelling?<br>Peng Li - Neural Network Based Multi-State Health Status Framework to Predict Outcomes of Cancer Survivors","Gaetano Tedesco - The Effect of Remote Contact Patterns During the\r\nCOVID-19 Lockdown on Older Peoples’ Loneliness A Doubly Robust Approach to Propensity Score Weighting with Gradient Boosted Regression<br>Jan Einhoff - Does Owning Your Home Make You Retire Early? A Comparative Analysis of Germany and the UK Using Targeted Maximum Likelihood Estimation<br>Natalia Andreeva - Uncovering the heterogeneity of the effects of parental unemployment on children mental health in Sweden.","Arne Bethmann - Automatic scoring of cognition drawings<br>Theresa Nutz - Generational trends and predictors of hormonal contraceptive usage in Germany: A machine learning approach<br>Vikas Kamble - Prediction of hypertension among elderly in India using Machine Learning Technique: Evidence from LASI wave 1 (2017-2019)","Jaini Yan - Death Predictions from Social Determinants: Holistically and precisely with Explainable AI<br>Kieron Barclay - The forest and the trees: using random forests to predict infant mortality in Demographic Health Survey data from India<br>Sabina Bercovich Szulmajster - Navigating Complexity: Exploring Gender and Sexuality\r\nAcross European Cultures"]},"columns":[{"id":".details","name":"","type":null,"sortable":false,"resizable":false,"filterable":false,"searchable":false,"width":45,"align":"center","details":[{"name":"Reactable","attribs":{"data":{"Presenters":["Rannveig Hart","Henrik Schubert","Micol Morellini","Xiao Xu"],"Title":["Explaining Childness: A machine learning approach","Couple’s subfecundity at the population level","Fertility of Emigrants via Online Retail Data: The Case of MammaPack","Predicting fertility behaviors with Deep Neural Networks: a comparative study"]},"columns":[{"id":"Presenters","name":"Presenter","type":"character"},{"id":"Title","name":"Presentation Title","type":"character"}],"highlight":true,"dataKey":"2661ed94db93f444fb700930cd773776","static":false,"nested":true},"children":[]},{"name":"Reactable","attribs":{"data":{"Presenters":["Chu Yue","Natalia Martins Arruda","Pietro Violo"],"Title":["Leveraging Machine Learning Techniques for Verbal Autopsy Analysis","Socioeconomic Inequalities in Adult Mortality across Small Areas in Brazil: Exploration \r\nAnalysis Using Machine Learning Models","The Usage of Obituaries as an Alternative Data Source for Mortality"]},"columns":[{"id":"Presenters","name":"Presenter","type":"character"},{"id":"Title","name":"Presentation Title","type":"character"}],"highlight":true,"dataKey":"30dd98e78d929cb5c39702f2d2d1cff2","static":false,"nested":true},"children":[]},{"name":"Reactable","attribs":{"data":{"Presenters":["Alejandra Rodriguo Sanchez","Carla Rowold","Daniela Ghio","Sanni Kuikka"],"Title":["The predictive residual method: A machine learning approach to estimate the stock of migrants without residence status using innovative data.","Decomposing the Gender Wealth Gap in late working age based on the most relevant family and work life course aspects","An analytical approach to explain the spatial interplay among migration drivers","Predicting Multidimensional Socioeconomic Status with Parental SES and Childhood Circumstances"]},"columns":[{"id":"Presenters","name":"Presenter","type":"character"},{"id":"Title","name":"Presentation Title","type":"character"}],"highlight":true,"dataKey":"208c829804aa6f81550712d3f7b9a7a0","static":false,"nested":true},"children":[]},{"name":"Reactable","attribs":{"data":{"Presenters":["Annika Strömer","Hannah Klinkhammer","Peng Li"],"Title":["A model-based boosting approach to deal with dependent censoring","Bridging the performance gap for underrepresented populations: How to account for population structure in polygenic risk modelling?","Neural Network Based Multi-State Health Status Framework to Predict Outcomes of Cancer Survivors"]},"columns":[{"id":"Presenters","name":"Presenter","type":"character"},{"id":"Title","name":"Presentation Title","type":"character"}],"highlight":true,"dataKey":"8b696c90eb89f8cb0c6c978848d11408","static":false,"nested":true},"children":[]},{"name":"Reactable","attribs":{"data":{"Presenters":["Gaetano Tedesco","Jan Einhoff","Natalia Andreeva"],"Title":["The Effect of Remote Contact Patterns During the\r\nCOVID-19 Lockdown on Older Peoples’ Loneliness A Doubly Robust Approach to Propensity Score Weighting with Gradient Boosted Regression","Does Owning Your Home Make You Retire Early? A Comparative Analysis of Germany and the UK Using Targeted Maximum Likelihood Estimation","Uncovering the heterogeneity of the effects of parental unemployment on children mental health in Sweden."]},"columns":[{"id":"Presenters","name":"Presenter","type":"character"},{"id":"Title","name":"Presentation Title","type":"character"}],"highlight":true,"dataKey":"80efd5d2f7b059bb0cd445444b9468b4","static":false,"nested":true},"children":[]},{"name":"Reactable","attribs":{"data":{"Presenters":["Arne Bethmann","Theresa Nutz","Vikas Kamble"],"Title":["Automatic scoring of cognition drawings","Generational trends and predictors of hormonal contraceptive usage in Germany: A machine learning approach","Prediction of hypertension among elderly in India using Machine Learning Technique: Evidence from LASI wave 1 (2017-2019)"]},"columns":[{"id":"Presenters","name":"Presenter","type":"character"},{"id":"Title","name":"Presentation Title","type":"character"}],"highlight":true,"dataKey":"051a02907495f4b62c0871633553d243","static":false,"nested":true},"children":[]},{"name":"Reactable","attribs":{"data":{"Presenters":["Jaini Yan","Kieron Barclay","Sabina Bercovich Szulmajster"],"Title":["Death Predictions from Social Determinants: Holistically and precisely with Explainable AI","The forest and the trees: using random forests to predict infant mortality in Demographic Health Survey data from India","Navigating Complexity: Exploring Gender and Sexuality\r\nAcross European Cultures"]},"columns":[{"id":"Presenters","name":"Presenter","type":"character"},{"id":"Title","name":"Presentation Title","type":"character"}],"highlight":true,"dataKey":"3e87832c18c1630a7aae4b3233032c27","static":false,"nested":true},"children":[]}]},{"id":"Session","name":"Session presenters","type":"character"},{"id":"Details","name":"Details","type":"character","show":false}],"showPageSizeOptions":true,"dataKey":"a772ce81d82de1f82c294fbb0661a0fd"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
 
 
 
@@ -271,10 +809,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -284,8 +839,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -297,7 +861,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -341,6 +1028,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -366,6 +1054,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -426,6 +1140,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

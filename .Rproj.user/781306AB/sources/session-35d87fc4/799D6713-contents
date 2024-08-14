@@ -1,0 +1,141 @@
+## Load packages
+library(dtms)
+library(ggplot2)
+library(tidyverse)
+## Define model: Absorbing and transient states, time scale
+hrs <- dtms(transient=c("Working","Non-working","Retired"),
+            absorbing="Dead",
+            timescale=50:99)
+
+## Quick look at data
+head(hrsdata)
+#>   ID Gender Age State
+#> 1  1      1  50  <NA>
+#> 2  1      1  51  <NA>
+#> 3  1      1  52  <NA>
+#> 4  1      1  53  <NA>
+#> 5  1      1  54  <NA>
+#> 6  1      1  55  <NA>
+
+## Reshape
+estdata <- dtms_format(data=hrsdata,
+                       dtms=hrs,
+                       idvar="ID",
+                       timevar="Age",
+                       statevar="State")
+
+## Drop dead-to-dead transitions etc
+estdata <- dtms_clean(data=estdata,
+                      dtms=hrs)
+#> Dropping  0  rows not in state space
+#> Dropping  0  rows not in time range
+#> Dropping  98287  rows starting or ending in NA
+#> Dropping  51935  rows starting in absorbing state
+
+## Overview
+summary(estdata)
+#>           from          to COUNT        PROP        PROB
+#> 1  Non-working        Dead   197 0.001974383 0.013936050
+#> 2  Non-working Non-working 10635 0.106586622 0.752334465
+#> 3  Non-working     Retired  1900 0.019042274 0.134408602
+#> 4  Non-working     Working  1404 0.014071238 0.099320883
+#> 5      Retired        Dead  2602 0.026077893 0.051556401
+#> 6      Retired Non-working   606 0.006073483 0.012007371
+#> 7      Retired     Retired 46423 0.465262884 0.919831976
+#> 8      Retired     Working   838 0.008398645 0.016604252
+#> 9      Working        Dead   306 0.003066808 0.008699855
+#> 10     Working Non-working  2066 0.020705967 0.058738237
+#> 11     Working     Retired  2178 0.021828459 0.061922497
+#> 12     Working     Working 30623 0.306911343 0.870639411
+
+## Basic censoring
+dtms_censoring(data=estdata,
+               dtms=hrs)
+#> Units with left censoring:  2036 
+#> Units with gaps:  1720 
+#> Units with right censoring:  1323
+
+## More advanced censoring example
+estdata <- dtms_censoring(data=estdata,
+                          dtms=hrs,
+                          add=T,
+                          addtype="obs")
+#> Units with left censoring:  2036 
+#> Units with gaps:  1720 
+#> Units with right censoring:  1323
+
+estdata |>
+  subset(subset=to!="Dead",select=c(RIGHT,to)) |>
+  table() |>
+  prop.table(margin=1)
+#>        to
+#> RIGHT   Non-working    Retired    Working
+#>   FALSE  0.13846880 0.51950708 0.34202412
+#>   TRUE   0.07860922 0.73015873 0.19123205
+
+## Add age squared
+estdata$time2 <- estdata$time^2
+estdata$time2 <- ifelse(estdata$time > 65, 1, 0)*estdata$time
+
+means <- estdata %>%
+  group_by(time) %>%
+  summarize(mean_value = mean(time2))
+
+## Fit model
+fit <- dtms_fit(data=estdata,
+                formula=to~from+time+time2+Gender)
+
+## Transition probabilities by gender
+
+# Men
+probs_m <- dtms_transitions(dtms=hrs,
+                            model = fit,
+                            controls = list(Gender=0,
+                                            time  =50:98, 
+                                            time2 = means$mean_value),
+                            CI=TRUE)
+
+# Women
+probs_w <- dtms_transitions(dtms=hrs,
+                            model = fit,
+                            controls = list(Gender=1,
+                                            time  =50:98,
+                                            time2 =(50:98)^2),
+                            CI=TRUE)
+
+# Overview
+summary(probs_m)
+#>           from          to    MIN MINtime    MAX MAXtime MEDIAN   MEAN
+#> 1  Non-working        Dead 0.0064      50 0.7701      98 0.1080 0.2055
+#> 4  Non-working Non-working 0.0000      98 0.8173      54 0.1402 0.3186
+#> 7  Non-working     Retired 0.0356      50 0.7089      79 0.3904 0.3880
+#> 10 Non-working     Working 0.0238      98 0.1668      50 0.1008 0.0879
+#> 2      Retired        Dead 0.0231      58 0.4588      98 0.0364 0.0930
+#> 5      Retired Non-working 0.0000      98 0.1627      50 0.0025 0.0324
+#> 8      Retired     Retired 0.5365      98 0.9492      73 0.8855 0.8381
+#> 11     Retired     Working 0.0047      98 0.2132      50 0.0121 0.0365
+#> 3      Working        Dead 0.0013      50 0.4725      98 0.0288 0.0926
+#> 6      Working Non-working 0.0000      98 0.0704      58 0.0104 0.0252
+#> 9      Working     Retired 0.0075      50 0.2443      85 0.1524 0.1375
+#> 12     Working     Working 0.3990      98 0.9456      50 0.7862 0.7447
+summary(probs_w)
+#>           from          to    MIN MINtime    MAX MAXtime MEDIAN   MEAN
+#> 1  Non-working        Dead 0.0036      50 0.6979      98 0.0743 0.1649
+#> 4  Non-working Non-working 0.0000      98 0.8565      54 0.1780 0.3471
+#> 7  Non-working     Retired 0.0296      50 0.7504      80 0.4309 0.4090
+#> 10 Non-working     Working 0.0297      98 0.1312      50 0.0822 0.0791
+#> 2      Retired        Dead 0.0156      57 0.3678      98 0.0253 0.0687
+#> 5      Retired Non-working 0.0000      98 0.2013      50 0.0032 0.0404
+#> 8      Retired     Retired 0.5857      50 0.9600      74 0.9001 0.8567
+#> 11     Retired     Working 0.0052      98 0.1966      50 0.0115 0.0341
+#> 3      Working        Dead 0.0009      50 0.3908      98 0.0208 0.0718
+#> 6      Working Non-working 0.0000      98 0.0922      58 0.0138 0.0332
+#> 9      Working     Retired 0.0078      50 0.2633      86 0.1700 0.1488
+#> 12     Working     Working 0.4542      98 0.9311      50 0.7815 0.7462
+
+# Plotting, men as example
+probs_m |>  dtms_simplify() |> 
+  ggplot(aes(x=time,y=P,color=to)) + 
+  geom_ribbon(aes(ymin = CIlow, ymax = CIup,fill=to),alpha=0.5) +
+  geom_line() + 
+  facet_wrap(~from)

@@ -1,14 +1,38 @@
 [
   {
-    "objectID": "contact.html",
-    "href": "contact.html",
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Timetable\n\n\nDay 1 - 05/11/2024\nDay 2 - 06/11/2024\n\n\n\n\n\n\n\n\n\n\n09:00 - 09:10\nOpening\n9:20 - 10:20\nKeynote: Ian Lundberg\n\n\n9:10 - 10:30\nSession 1: Fertility\n10:20 - 10:40\nCoffee\n\n\n10:30 - 10:50\nCoffee\n10:40 - 12:00\nSession 5: Causal Inference\n\n\n10:50 - 11:50\nSession 2: Mortality\n12:00 - 13:00\nLunch\n\n\n11:50 - 13:00\nLunch\n13:00 - 14:00\nSession 6: Predictions health\n\n\n13:00 - 14:00\nSession 3: Migration and SES\n14:00 - 14:20\nCoffee\n\n\n14:00 - 15:30\nCoffee + Poster\n14:20 - 15:20\nComputer Tutorial\n\n\n15:30 - 16:50\nSession 4: Methods\n15:20 - 15:40\nCoffee\n\n\n16:50 - 17:00\nCoffee\n15:40 - 16:40\nSession 7: Understanding complexity\n\n\n17:00 - 18:00\nKeynote: Jennie Brand\n16:40 - 16:50\nCoffee\n\n\n19:00+\nSocial dinner\n16:50 - 18:00\nPanel discussion",
+    "crumbs": [
+      "Program"
+    ]
+  },
+  {
+    "objectID": "ML_workshop/schedule.html",
+    "href": "ML_workshop/schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Preliminary program:\n\n\n\n\n\n\n\n\n\nTuesday\nWednesday\n\n\n\n\nMorning\nWelcome & keynote\nContributed session 3\n\n\nEarly afternoon\nContributed session 1 & tutorial\nKeynote 2\n\n\nLate afternoon\nContributed session 2\nContributed session 4 + panel discussion\n\n\nEvening\nSocial dinner"
+  },
+  {
+    "objectID": "ML_workshop/materials.html",
+    "href": "ML_workshop/materials.html",
+    "title": "Course Materials",
+    "section": "",
+    "text": "Datasets\nSlides"
+  },
+  {
+    "objectID": "ML_workshop/contact.html",
+    "href": "ML_workshop/contact.html",
     "title": "Rostock",
     "section": "",
     "text": "Max Planck Institute for Demographic Research\nKonrad-Zuse-Str. 1\n18057 Rostock, Germany\nMLworkshop@demogr.mpg.de\nSCIENTIFIC ORGANIZING COMMITTEE\nAngela Carollo, Aapo Hiilamo and Mikko Myrskylä"
   },
   {
-    "objectID": "contact.html#how-to-reach-us",
-    "href": "contact.html#how-to-reach-us",
+    "objectID": "ML_workshop/contact.html#how-to-reach-us",
+    "href": "ML_workshop/contact.html#how-to-reach-us",
     "title": "Rostock",
     "section": "",
     "text": "Max Planck Institute for Demographic Research\nKonrad-Zuse-Str. 1\n18057 Rostock, Germany\nMLworkshop@demogr.mpg.de\nSCIENTIFIC ORGANIZING COMMITTEE\nAngela Carollo, Aapo Hiilamo and Mikko Myrskylä"
@@ -18,7 +42,30 @@
     "href": "index.html",
     "title": "Demystifying machine learning for population researchers",
     "section": "",
-    "text": "Advances in computational power and statistical algorithms, in conjunction with the increasing availability of large datasets, have led to a Cambrian explosion of machine learning (ML) methods. For population researchers, these methods are useful not only for predicting population dynamics but also as tools to improve causal inference tasks. However, the rapid evolution of this literature, coupled with terminological disparities from conventional approaches, renders these methods enigmatic and arduous for many population researchers to grasp.\nThis workshop clarifies the goals, techniques, and applications of machine learning methods for population research. The workshop covers\n\nan introduction to ML methods for population researchers,\nshowcases of ML applications to answer causal questions,\ndiscussions of the current developments of ML for population health, fertility and family dynamics, and\nfosters critical discussions about the shortfalls of these techniques.\n\nThe main focus of this workshop is on ML techniques using quantitative population data and research questions, not on ML language models. The workshop consists of keynotes, contributed sessions, and a tutorial.\nOne keynote lecture will be delivered by Prof. Ian Lundberg (Cornell University, https://www.ianlundberg.org/). Prof. Jennie E. Brand (UCLA, https://www.profjenniebrand.com/) will deliver an online talk.\nThis in-person workshop will take place in November 5-6 at the Max Planck Institute for Demographic Research in Rostock. We invite population researchers with interest in ML applications. We aim to receive contributions from different fields of population sciences, such as population health, formal and social demography, public health and economics, among others.\nWe invite submission of original research abstract with relevance to ML and population sciences (max 500 words) and a CV (max. one page) to MLworkshop@demogr.mpg.de.\nSubmission Deadline: 30. April 2024\nDecisions on the selection will be communicated before May 15th. Please direct any questions to this email address.\nOrganization committee: Angela Carollo, Aapo Hiilamo, Mikko Myrskyla.\nThe workshop has no fees. Participants are expected to cover their travel and accommodation but limited financial support, offered on a competitive basis, is available for junior scientists or scientists from low-middle income countries. Please indicate the request for such funding at the time of abstract submission."
+    "text": "Advances in computational power and statistical algorithms, in conjunction with the increasing availability of large datasets, have led to a Cambrian explosion of machine learning (ML) methods. For population researchers, these methods are useful not only for predicting population dynamics but also as tools to improve causal inference tasks. However, the rapid evolution of this literature, coupled with terminological disparities from conventional approaches, renders these methods enigmatic and arduous for many population researchers to grasp.\nThis workshop clarifies the goals, techniques, and applications of machine learning methods for population research. The workshop covers\n\nan introduction to ML methods for population researchers,\nshowcases of ML applications to answer causal questions,\ndiscussions of the current developments of ML for population health, fertility and family dynamics, and\nfosters critical discussions about the shortfalls of these techniques.\n\nThe main focus of this workshop is on ML techniques using quantitative population data and research questions, not on ML language models. The workshop consists of keynotes, contributed sessions, and a tutorial.\nOne keynote lecture will be delivered by Prof. Ian Lundberg (Cornell University, https://www.ianlundberg.org/). Prof. Jennie E. Brand (UCLA, https://www.profjenniebrand.com/) will deliver an online talk.\nThis in-person workshop will take place in November 5-6 at the Max Planck Institute for Demographic Research in Rostock. We invite population researchers with interest in ML applications. We aim to receive contributions from different fields of population sciences, such as population health, formal and social demography, public health and economics, among others.\nWe invite submission of original research abstract with relevance to ML and population sciences (max 500 words) and a CV (max. one page) to MLworkshop@demogr.mpg.de.\nSubmission Deadline: 30. April 2024\nDecisions on the selection will be communicated before May 15th. Please direct any questions to this email address.\nOrganization committee: Angela Carollo, Aapo Hiilamo, Mikko Myrskyla.\nThe workshop has no fees. Participants are expected to cover their travel and accommodation but limited financial support, offered on a competitive basis, is available for junior scientists or scientists from low-middle income countries. Please indicate the request for such funding at the time of abstract submission.\nThe workshop is organized by the Max Planck Institute for Demographic Research and The Max Planck – University of Helsinki Center for Social Inequalities in Population Health.",
+    "crumbs": [
+      "Call for contributions"
+    ]
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Rostock",
+    "section": "",
+    "text": "Max Planck Institute for Demographic Research\nKonrad-Zuse-Str. 1\n18057 Rostock, Germany\nMLworkshop@demogr.mpg.de\nSCIENTIFIC ORGANIZING COMMITTEE\nAngela Carollo, Aapo Hiilamo and Mikko Myrskylä",
+    "crumbs": [
+      "Contacts"
+    ]
+  },
+  {
+    "objectID": "contact.html#how-to-reach-us",
+    "href": "contact.html#how-to-reach-us",
+    "title": "Rostock",
+    "section": "",
+    "text": "Max Planck Institute for Demographic Research\nKonrad-Zuse-Str. 1\n18057 Rostock, Germany\nMLworkshop@demogr.mpg.de\nSCIENTIFIC ORGANIZING COMMITTEE\nAngela Carollo, Aapo Hiilamo and Mikko Myrskylä",
+    "crumbs": [
+      "Contacts"
+    ]
   },
   {
     "objectID": "materials.html",
@@ -28,45 +75,95 @@
     "text": "Datasets\nSlides"
   },
   {
+    "objectID": "ML_workshop/index.html",
+    "href": "ML_workshop/index.html",
+    "title": "Demystifying machine learning for population researchers",
+    "section": "",
+    "text": "Advances in computational power and statistical algorithms, in conjunction with the increasing availability of large datasets, have led to a Cambrian explosion of machine learning (ML) methods. For population researchers, these methods are useful not only for predicting population dynamics but also as tools to improve causal inference tasks. However, the rapid evolution of this literature, coupled with terminological disparities from conventional approaches, renders these methods enigmatic and arduous for many population researchers to grasp.\nThis workshop clarifies the goals, techniques, and applications of machine learning methods for population research. The workshop covers\n\nan introduction to ML methods for population researchers,\nshowcases of ML applications to answer causal questions,\ndiscussions of the current developments of ML for population health, fertility and family dynamics, and\nfosters critical discussions about the shortfalls of these techniques.\n\nThe main focus of this workshop is on ML techniques using quantitative population data and research questions, not on ML language models. The workshop consists of keynotes, contributed sessions, and a tutorial.\nOne keynote lecture will be delivered by Prof. Ian Lundberg (Cornell University, https://www.ianlundberg.org/). Prof. Jennie E. Brand (UCLA, https://www.profjenniebrand.com/) will deliver an online talk.\nThis in-person workshop will take place in November 5-6 at the Max Planck Institute for Demographic Research in Rostock. We invite population researchers with interest in ML applications. We aim to receive contributions from different fields of population sciences, such as population health, formal and social demography, public health and economics, among others.\nWe invite submission of original research abstract with relevance to ML and population sciences (max 500 words) and a CV (max. one page) to MLworkshop@demogr.mpg.de.\nSubmission Deadline: 15. May 2024\nDecisions on the selection will be communicated before May 31st.\nPlease direct any questions to MLworkshop@demogr.mpg.de.\nOrganization committee: Angela Carollo, Aapo Hiilamo, Mikko Myrskyla.\nThe workshop has no fees. Participants are expected to cover their travel and accommodation but limited financial support, offered on a competitive basis, is available for junior scientists or scientists from low-middle income countries. Please indicate the request for such funding at the time of abstract submission.\nThe workshop is organized by the Max Planck Institute for Demographic Research and The Max Planck – University of Helsinki Center for Social Inequalities in Population Health."
+  },
+  {
+    "objectID": "ML_workshop/rostock.html",
+    "href": "ML_workshop/rostock.html",
+    "title": "Rostock",
+    "section": "",
+    "text": "Rostock can be reached by train from the international airports of Berlin (BER) and Hamburg (HAM). Information about train schedules and tickets can be found here."
+  },
+  {
+    "objectID": "ML_workshop/rostock.html#how-to-get-there",
+    "href": "ML_workshop/rostock.html#how-to-get-there",
+    "title": "Rostock",
+    "section": "",
+    "text": "Rostock can be reached by train from the international airports of Berlin (BER) and Hamburg (HAM). Information about train schedules and tickets can be found here."
+  },
+  {
+    "objectID": "ML_workshop/rostock.html#where-to-stay",
+    "href": "ML_workshop/rostock.html#where-to-stay",
+    "title": "Rostock",
+    "section": "Where to stay?",
+    "text": "Where to stay?\nThere are several options for accommodation in Rostock.\nWe recommend the following hotels:\n- Motel One Rostock in the city center, is only a 20 minutes walk from the Institute.\n- B&B HOTEL Rostock City-West right in front of the Institute.\n- elaya hotel Rostock also in front of the Institute."
+  },
+  {
+    "objectID": "ML_workshop/rostock.html#mpidr",
+    "href": "ML_workshop/rostock.html#mpidr",
+    "title": "Rostock",
+    "section": "MPIDR",
+    "text": "MPIDR\nThe Max Planck Institute for Demographic Research is located at the Warnow River.\nAddress:\nMax Planck Institute for Demographic Research (MPIDR)\nKonrad-Zuse-Straße 1\n18057 Rostock\nGermany\nGoogle maps\nThe nearest public transportation stops in Rostock are: Maßmannstraße (tram) and Holbeinplatz (S-Bahn). Information about public transportation can be found here."
+  },
+  {
+    "objectID": "ML_workshop/rostock.html#what-to-do",
+    "href": "ML_workshop/rostock.html#what-to-do",
+    "title": "Rostock",
+    "section": "What to do?",
+    "text": "What to do?\nThe Hanseatic and University city of Rostock is the largest city in German state of Mecklemburg-Vorpommern. It stretches along boths sides of the Warnow River, and it includes the seaside town of Warnemünde. For information about activities and destinations in Rostock, we refer to the official page from the municipality here."
+  },
+  {
     "objectID": "rostock.html",
     "href": "rostock.html",
     "title": "Rostock",
     "section": "",
-    "text": "Rostock can be reached by train from the international airports of Berlin (BER) and Hamburg (HAM). Information about train schedules and tickets can be found here."
+    "text": "Rostock can be reached by train from the international airports of Berlin (BER) and Hamburg (HAM). Information about train schedules and tickets can be found here.",
+    "crumbs": [
+      "Rostock"
+    ]
   },
   {
     "objectID": "rostock.html#how-to-get-there",
     "href": "rostock.html#how-to-get-there",
     "title": "Rostock",
     "section": "",
-    "text": "Rostock can be reached by train from the international airports of Berlin (BER) and Hamburg (HAM). Information about train schedules and tickets can be found here."
+    "text": "Rostock can be reached by train from the international airports of Berlin (BER) and Hamburg (HAM). Information about train schedules and tickets can be found here.",
+    "crumbs": [
+      "Rostock"
+    ]
   },
   {
     "objectID": "rostock.html#where-to-stay",
     "href": "rostock.html#where-to-stay",
     "title": "Rostock",
     "section": "Where to stay?",
-    "text": "Where to stay?\nThere are several options for accommodation in Rostock.\nWe recommend the following hotels:\n- Motel One Rostock in the city center, is only a 20 minutes walk from the Institute.\n- B&B HOTEL Rostock City-West right in front of the Institute.\n- elaya hotel Rostock also in front of the Institute."
+    "text": "Where to stay?\nThere are several options for accommodation in Rostock.\nWe recommend the following hotels:\n- Motel One Rostock in the city center, is only a 20 minutes walk from the Institute.\n- B&B HOTEL Rostock City-West right in front of the Institute.\n- elaya hotel Rostock also in front of the Institute.",
+    "crumbs": [
+      "Rostock"
+    ]
   },
   {
     "objectID": "rostock.html#mpidr",
     "href": "rostock.html#mpidr",
     "title": "Rostock",
     "section": "MPIDR",
-    "text": "MPIDR\nThe Max Planck Institute for Demographic Research is located at the Warnow River.\nAddress:\nMax Planck Institute for Demographic Research (MPIDR)\nKonrad-Zuse-Straße 1\n18057 Rostock\nGermany\nGoogle maps\nThe nearest public transportation stops in Rostock are: Maßmannstraße (tram) and Holbeinplatz (S-Bahn). Information about public transportation can be found here."
+    "text": "MPIDR\nThe Max Planck Institute for Demographic Research is located at the Warnow River.\nAddress:\nMax Planck Institute for Demographic Research (MPIDR)\nKonrad-Zuse-Straße 1\n18057 Rostock\nGermany\nGoogle maps\nThe nearest public transportation stops in Rostock are: Maßmannstraße (tram) and Holbeinplatz (S-Bahn). Information about public transportation can be found here.",
+    "crumbs": [
+      "Rostock"
+    ]
   },
   {
     "objectID": "rostock.html#what-to-do",
     "href": "rostock.html#what-to-do",
     "title": "Rostock",
     "section": "What to do?",
-    "text": "What to do?\nThe Hanseatic and University city of Rostock is the largest city in German state of Mecklemburg-Vorpommern. It stretches along boths sides of the Warnow River, and it includes the seaside town of Warnemünde. For information about activities and destinations in Rostock, we refer to the official page from the municipality here."
-  },
-  {
-    "objectID": "schedule.html",
-    "href": "schedule.html",
-    "title": "Schedule",
-    "section": "",
-    "text": "Preliminary program:\n\n\n\n\n\n\n\n\n\nTuesday\nWednesday\n\n\n\n\nMorning\nWelcome & keynote\nContributed session 2\n\n\nEarly afternoon\nTutorial\nKeynote & contributed session 3\n\n\nLate afternoon\nContributed session 1\nContributed session 4 + panel discussion\n\n\nEvening\nSocial dinner"
+    "text": "What to do?\nThe Hanseatic and University city of Rostock is the largest city in German state of Mecklemburg-Vorpommern. It stretches along boths sides of the Warnow River, and it includes the seaside town of Warnemünde. For information about activities and destinations in Rostock, we refer to the official page from the municipality here.",
+    "crumbs": [
+      "Rostock"
+    ]
   }
 ]
